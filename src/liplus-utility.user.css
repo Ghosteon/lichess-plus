@@ -1,0 +1,66 @@
+/* ==UserStyle==
+@name           LiPlus - Utility
+@namespace      https://github.com/Ghosteon/
+@version        1.0.0
+@description    Useful utilities for lichess.org
+@author         Ghosteon <https://github.com/Ghosteon/>
+@homepageURL	https://github.com/Ghosteon/lichess-plus/
+@supportURL		https://github.com/Ghosteon/lichess-plus/issues
+@updateURL		https://github.com/Ghosteon/lichess-plus/src/liplus-utility.user.css
+@license		MIT
+
+@preprocessor	stylus
+@var text       bgFix    "Background Fix"   '"base64 data"'
+@var checkbox   darkerMode "Darker Mode" 0
+@var checkbox   colorAnalysis "Colorized Analysis" 0
+@var checkbox   hideFL "Hide Friend List" 0
+@var checkbox   hideArrows "Hide Arrows in Live" 0
+==/UserStyle==*/
+@-moz-document domain("lichess.org") {
+    body {
+        if (darkerMode) {
+            background: rgb(16, 16, 16);
+        }
+        background-size: cover;
+        background-image: url(bgFix);
+    }
+    if (colorAnalysis) {
+        glyph[title="Dubious move"] {
+            color: rgb(86, 180, 233);
+        }
+
+        glyph[title="Mistake"] {
+            color: rgb(230, 159, 0);
+        }
+
+        glyph[title="Blunder"] {
+            color: rgb(223, 83, 83);
+        }
+
+        .advice-summary tr[data-symbol="?!"] {
+            color: rgb(86, 180, 233);
+        }
+
+        .advice-summary tr[data-symbol="?"] {
+            color: rgb(230, 159, 0);
+        }
+
+        .advice-summary tr[data-symbol="??"] {
+            color: rgb(223, 83, 83);
+        }
+    }
+    if (hideFL) {
+        #friend_box {
+            display: none;
+        }
+    }
+    if (hideArrows) {
+        .playing g {
+            display: none;
+        }
+
+        .puzzle g {
+            display: initial;
+        }
+    }
+}
