@@ -6,8 +6,8 @@
 @author         Ghosteon <https://github.com/Ghosteon/>
 @homepageURL	https://github.com/Ghosteon/lichess-plus/
 @supportURL		https://github.com/Ghosteon/lichess-plus/issues
-@updateURL		https://github.com/Ghosteon/lichess-plus/src/liplus-theme.user.css
-@license		MIT
+@updateURL      https://raw.githubusercontent.com/Ghosteon/lichess-plus/master/src/liplus-theme.user.css
+@license        MIT
 
 @preprocessor	stylus
 @var select		pieces "Pieces Style" {
@@ -25,6 +25,7 @@
     "Grabbing (chess.com)": "chesscom"
 }
 ==/UserStyle==*/
+
 @-moz-document domain("lichess.org") {
     if (pieces=="neo") {
         piece.pawn.black {

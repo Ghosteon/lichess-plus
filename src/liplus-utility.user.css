@@ -4,18 +4,19 @@
 @version        1.0.0
 @description    Useful utilities for lichess.org
 @author         Ghosteon <https://github.com/Ghosteon/>
-@homepageURL	https://github.com/Ghosteon/lichess-plus/
-@supportURL		https://github.com/Ghosteon/lichess-plus/issues
-@updateURL		https://github.com/Ghosteon/lichess-plus/src/liplus-utility.user.css
-@license		MIT
+@homepageURL    https://github.com/Ghosteon/lichess-plus/
+@supportURL     https://github.com/Ghosteon/lichess-plus/issues
+@updateURL      https://raw.githubusercontent.com/Ghosteon/lichess-plus/master/src/liplus-utility.user.css
+@license        MIT
 
 @preprocessor	stylus
-@var text       bgFix    "Background Fix"   '"base64 data"'
+@var text       bgFix "Background Fix" '"base64 data"'
 @var checkbox   darkerMode "Darker Mode" 0
 @var checkbox   colorAnalysis "Colorized Analysis" 0
 @var checkbox   hideFL "Hide Friend List" 0
 @var checkbox   hideArrows "Hide Arrows in Live" 0
 ==/UserStyle==*/
+
 @-moz-document domain("lichess.org") {
     body {
         if (darkerMode) {
